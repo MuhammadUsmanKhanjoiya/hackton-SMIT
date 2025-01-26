@@ -3,7 +3,7 @@ const { Resend } = require("resend")
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 const sendPasswordResetEmail = async (email, resetToken) => {
-  const resetUrl = `http://localhost:3000/reset-password/${resetToken}`
+  const resetUrl = `https://hackton-smit-9knaz14gi-muhammad-usman-khan-joiyas-projects.vercel.app/reset-password/${resetToken}`
 
   const { data, error } = await resend.emails.send({
     from: "Saylani Microfinance <noreply@yourdomain.com>",
